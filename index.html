@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fish Feast - Browser Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="ui">
+      <div id="hud">
+        <div class="hud-item"><span class="label">Score</span><span id="score">0</span></div>
+        <div class="hud-item"><span class="label">Best</span><span id="best">0</span></div>
+        <div class="hud-item"><span class="label">Lives</span><span id="lives">3</span></div>
+        <button id="pauseBtn" aria-label="Pause">⏸</button>
+      </div>
+      <div id="overlay" class="show">
+        <h1>Fish Feast</h1>
+        <p class="subtitle">Eat smaller fish, avoid bigger ones. Grow and set a high score!</p>
+        <ul class="help">
+          <li><b>Move</b>: Arrow Keys / WASD / Drag (touch)</li>
+          <li><b>Goal</b>: Eat fish smaller than you to grow. Avoid larger fish.</li>
+          <li><b>Tip</b>: The edge currents push all fish. Plan your path.</li>
+        </ul>
+        <button id="startBtn" class="primary">Start</button>
+      </div>
+      <div id="gameOver" class="overlay-card">
+        <h2>Game Over</h2>
+        <p id="finalScore"></p>
+        <button id="restartBtn" class="primary">Play Again</button>
+      </div>
+    </div>
+    <canvas id="game"></canvas>
+
+    <script src="main.js"></script>
+  </body>
+  </html>
+
